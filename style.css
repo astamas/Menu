@@ -1,0 +1,145 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background: #121212;
+    font-family: 'Lato', sans-serif;
+  }
+
+  nav{
+    float: none; 
+    /* clear: both; */
+    width: 80px; 
+    margin: 10px auto;
+    background: #121212;
+    text-align: center;
+    margin-top: 300px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  nav li{
+      /* float: none;  */
+    width: 100%;
+  }
+  
+  nav li a{
+    display: block; 
+    width: 100%; 
+    margin: 30px;
+    padding: 2px; 
+    border-left: 5px solid; 
+    position: relative; 
+    z-index: 2;
+    text-decoration: none;
+    color: whitesmoke;
+    box-sizing: border-box;  
+    /* -moz-box-sizing: border-box;  
+    -webkit-box-sizing: border-box;  */
+  }
+
+ 
+
+  
+      
+  nav li a:hover{ border-bottom: 0px; color: whitesmoke;}
+  nav li:first-child a{ border-left:  red; }
+  nav li:nth-child(2) a{ border-left:  red; }
+  nav li:nth-child(3) a{ border-left:  red; }
+  nav li:last-child a{ border-left:  red; }
+  
+  nav li a:before { 
+    content: "";
+    height: 100%; 
+    left: 0; 
+    top: 0; 
+    width: 0px;  
+    position: absolute;  
+  }
+  
+  nav li a:hover::before{ 
+    width: 100%; 
+  }
+
+  nav li a:hover::before{ 
+    content: "";
+    background: red;
+    animation: before 1s forwards linear;
+    transform-origin: left center;
+    height: 20px;
+    width: 50px;
+  }
+
+  nav li a:hover::before {
+    animation: before 1s forwards linear;
+    transform-origin: top center;
+
+  }
+
+  @keyframes before {
+    0% {
+      transform: translate(0px);
+    }
+    25% {
+      transform: translate(25px);
+    }
+    25.1% {
+      transform: translate(35px);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(45);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translate(50px);
+      opacity: 0;
+      background: red;
+    }
+  }
+
+
+  nav li:nth-child(2) a::before{ background: red; }
+  nav li:nth-child(3) a::before{ background: red; }
+  nav li:last-child a::before{ background: red; }
+  
+ 
+
+  nav li a::after {
+    content: "";
+    height: 100%;
+    width: 0px;
+    position: absolute;
+    background: red; */
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    transition: 0.3s;
+    transition-delay: 0.5s;
+    
+  }
+
+  nav li a:hover::after {
+    width: 100%;
+  }
+
+  nav li a::hover::after {
+    content: "";
+    background: red;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    right: 0;
+    transition: 0.3s;
+    transition-delay: 0.5s;
+    width: 5px;
+    height: 5px;
+    
+  }
+
+ 
